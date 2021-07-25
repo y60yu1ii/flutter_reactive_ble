@@ -1,16 +1,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.signify.hue.reactivebleexample">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Request legacy Bluetooth permissions on older devices. -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- New BLE permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="31" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
+        tools:targetApi="31"/>
 
     <application
         android:label="flutter_reactive_ble_example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name="com.signify.hue.reactivebleexample.MainActivity"
+            android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
