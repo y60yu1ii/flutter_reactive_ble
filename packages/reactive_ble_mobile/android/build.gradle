@@ -79,12 +79,7 @@ detekt {
 
 protobuf {
     protoc {
-        // a fix for m1
-        if (osdetector.os == "osx") {
-            artifact = 'com.google.protobuf:protoc:3.13.0:osx-x86_64'
-        } else {
-            artifact = 'com.google.protobuf:protoc:3.13.0'
-        }
+        artifact = 'com.google.protobuf:protoc:3.14.0:osx-x86_64'
     }
 
     generateProtoTasks {
