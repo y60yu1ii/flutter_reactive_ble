@@ -371,9 +371,11 @@ packages:
   reactive_ble_mobile:
     dependency: "direct main"
     description:
-      name: reactive_ble_mobile
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "packages/reactive_ble_mobile"
+      ref: HEAD
+      resolved-ref: cc5f42489400b581d12c364b5d5506424b0d4d1f
+      url: "git@github.com:y60yu1ii/flutter_reactive_ble.git"
+    source: git
     version: "5.0.0"
   reactive_ble_platform_interface:
     dependency: "direct main"
